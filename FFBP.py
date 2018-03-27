@@ -6,6 +6,7 @@ structure. Feed forward and back propagation functions calculate activity values
 desired outputs, and back propagate error deltas to update weights and biases. The network is iterated upon using
 a trainer to minimize error.
 
+Author: Tim Healy
 """
 
 import numpy as np

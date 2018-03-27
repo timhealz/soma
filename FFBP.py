@@ -13,8 +13,8 @@ import numpy as np
 class Perceptron():
     def __init__(self, weights, bias):
         """
-        :param weights: length of weight vector has to match number of inputs for each perceptrong
-        :param bias: each perceptron also has a bias value that can be adjusted
+        Each Perceptron within the network stores and calculates relevant information like weights, biases,
+        activation values, errors, and deltas.
 
         Future release to have more flexibility around weight and bias value setting. These should be randomly
         generated if no weights and biases are given. Allowing user-inputted values for my class assignments.
@@ -30,8 +30,7 @@ class Perceptron():
 
     def sigmoid(self, z):
         """
-        :param z: function variable. Signmoid function squeezes input into 0:1 scale.
-        :return:
+        Sigmoid function squeezes activity value into 0:1 scale.
 
         Future release to enable user to pick different activation functions
         """
@@ -40,9 +39,10 @@ class Perceptron():
 
     def calc_activation(self, inputs):
         """
+        Using the above defined sigmoid activation function, this function calculates the activation value of
+        the Perceptron. Dot product of inputs and weights plus the bias value is fed into the sigmoid function.
 
-        :param inputs:
-        :return:
+        Future release to enable user to pick different activation functions
         """
         self.input_vector = np.array(inputs)
         A = np.dot(inputs, self.weights) + self.bias
@@ -50,6 +50,13 @@ class Perceptron():
         return(self.activation_value)
 
     def set_output_delta(self, inputs, desired_output, eta):
+        """
+        Since output layers and hidden layers have different calculations for their delta values, two different
+        delta functions are defined. Weights and biases in the output layer are then updated using the appropriate
+        delta value.
+
+        Output delta = Error * (1 - Activation Value) * Activation value
+        """
         inputs = np.array(inputs)
         self.error = desired_output - self.calc_activation(inputs)
         self.total_error = (1/2)*self.error**2
@@ -62,6 +69,13 @@ class Perceptron():
         print("     " + output)
 
     def set_hidden_delta(self, inputs, prev_deltas, prev_weights, eta):
+        """
+        Since output layers and hidden layers have different calculations for their delta values, two different
+        delta functions are defined. Weights and biases in the output layer are then updated using the appropriate
+        delta value.
+
+        Hidden delta = (1 - Activation Value) * Activation value * SUM(previous delta * previous weight)
+        """
         inputs = np.array(inputs)
         self.delta = (1 - self.activation_value) \
                      * self.activation_value * \
@@ -73,6 +87,11 @@ class Perceptron():
 
 class Network():
     def __init__(self, structure, weights, bias):
+        """
+        The Network object creates structures of Perceptron objects and feeds information stored within the perceptrons
+        to other perceptrons. The "structure" input guides a lot of logic in the functions, since information being fed
+        from layer to layer.
+        """
         self.structure = structure
         self.weights = weights
         self.bias = bias
@@ -89,11 +108,22 @@ class Network():
         self.output_vector = []
 
     def apply_activation(self, input_vector, perceptron_vector):
+        """
+        Helper function to vectorize the activation function calculation. I built this before I learned about list
+        comprehension.
+
+        Future release to use list comprehension.
+        """
         activation = lambda x: x.calc_activation(input_vector)
         apply_activation = np.vectorize(activation)
         return(apply_activation(perceptron_vector))
 
     def feed_forward(self, inputs):
+        """
+        The "FF" of FFBP. Starting with the first layer in the network, this function calculates activation values for
+        each perceptron in the layer, and then "feeds" the newly calculated activations values forward into the next layer
+        of perceptrons until it reaches the end of the network.
+        """
         print("Feeding Forward...")
         k = 0
         layer_output = []
@@ -108,6 +138,11 @@ class Network():
         self.output_vector = layer_output
 
     def back_propagate(self, inputs, desired_output, eta):
+        """
+        The "BP" of FFBP. Starting with the last (output) layer of the network, this function compares the output(s) to the
+        desired output(s), and calculates the error and delta values. These delta values are fed back into the previous
+        layer, updatin the weights and biases, until it reaches the beginning of the network.
+        """
         print("Back Propagating...")
         k = len(self.structure)-1
         while k >= 0:
@@ -140,6 +175,9 @@ class Network():
                 self.network[i][k].weights = self.network[i][k].updated_weights
 
     def trainer(self, inputs, desired_output, iterations, eta):
+        """
+        Included trainer function that allows the user to iterate on the network to minimize error.
+        """
         for i in range(iterations):
             print("Iteration " + str(i+1))
             if i == 0:

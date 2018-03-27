@@ -89,8 +89,8 @@ class Network():
     def __init__(self, structure, weights, bias):
         """
         The Network object creates structures of Perceptron objects and feeds information stored within the perceptrons
-        to other perceptrons. The "structure" input guides a lot of logic in the functions, since information being fed
-        from layer to layer.
+        to other perceptrons. The "structure" input guides a lot of logic in the functions, since information is being
+        fed from layer to layer.
         """
         self.structure = structure
         self.weights = weights
@@ -112,7 +112,7 @@ class Network():
         Helper function to vectorize the activation function calculation. I built this before I learned about list
         comprehension.
 
-        Future release to use list comprehension.
+        Future release to use list comprehension, this function won't be necessary.
         """
         activation = lambda x: x.calc_activation(input_vector)
         apply_activation = np.vectorize(activation)

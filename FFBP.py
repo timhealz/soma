@@ -141,7 +141,7 @@ class Network():
         """
         The "BP" of FFBP. Starting with the last (output) layer of the network, this function compares the output(s) to the
         desired output(s), and calculates the error and delta values. These delta values are fed back into the previous
-        layer, updatin the weights and biases, until it reaches the beginning of the network.
+        layer, updating the weights and biases, until it reaches the beginning of the network.
         """
         print("Back Propagating...")
         k = len(self.structure)-1

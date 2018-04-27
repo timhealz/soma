@@ -32,7 +32,8 @@ The built-in trainer utilizes a batch method. An online training method can be u
 
 #### Boltzmann Machine with Simulated Annealing for the Traveling Salesman Problem
 
-A Boltzmann Machine can be created and trained like so:
+A Boltzmann Machine can be created and trained as follows. It takes a distance matrix as its only argument. Each row and column in the distance matrix represents
+a city, and thus, each entry represents the distance between each city. For example, entry (1,2), represents the distance between city A and B, which is 10. This matrix is symmetric since (1,2) = (2,1), or the distance from A to B is the same as the distance from B to A.
 
 ```python
 from soma import Boltzmann as bolt

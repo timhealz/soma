@@ -33,7 +33,7 @@ class Network():
         self.route = [chr(x[1]+65) for x in self.pairs]
         self.route.append(self.route[0])
         self.weights = weight_matrix
-        self.calculate_consensus()
+        self.calculate_energy()
 
     def flip(self, i, j):
         """
@@ -43,7 +43,7 @@ class Network():
 
     def calculate_cost(self, connection):
         """
-        Helper function to calculate distance from activated nodes. Used to calculate consensus
+        Helper function to calculate distance from activated nodes. Used to calculate energy
         """
         weight_ij = (connection[0][1], connection[1][1])
         x_i = connection[0]
@@ -51,21 +51,21 @@ class Network():
         calc = self.weights[weight_ij] * self.network[x_i] * self.network[x_j]
         return(calc)
 
-    def calculate_consensus(self):
+    def calculate_energy(self):
         """
-        Calculates consensus of the network object. Consensus is used in the anneal process to optimize the
-        route in the TSP. The return trip back to the initial city is also calculated and added to the consensus.
+        Calculates energy of the network object. Energy is used in the anneal process to optimize the
+        route in the TSP. The return trip back to the initial city is also calculated and added to the energy.
         """
-        self.consensus = 0
+        self.energy = 0
         k = 0
         while k < self.dim-1:
-            self.consensus += self.calculate_cost([self.pairs[k], self.pairs[k+1]])
+            self.energy += self.calculate_cost([self.pairs[k], self.pairs[k+1]])
             k += 1
 
         returning_connection = [self.pairs[self.dim-1], self.pairs[0]]
-        self.consensus += self.calculate_cost(returning_connection)
+        self.energy += self.calculate_cost(returning_connection)
 
-        return(self.consensus)
+        return(self.energy)
 
     def shuffle(self):
         """
@@ -76,7 +76,7 @@ class Network():
         self.pairs = tuple(zip(*np.nonzero(self.network)))
         self.route = [chr(x[1]+65) for x in self.pairs]
         self.route.append(self.route[0])
-        self.calculate_consensus()
+        self.calculate_energy()
 
 class Boltzmann():
     """
@@ -89,13 +89,13 @@ class Boltzmann():
 
     def anneal(self):
         """
-        Makes a copy of the initialized network, shuffles it, and tests to see if the consensus of the shuffled
+        Makes a copy of the initialized network, shuffles it, and tests to see if the energy of the shuffled
         network is lower than the current network.
         """
         self.working = copy.deepcopy(self.optimized)
         self.working.shuffle()
 
-        if self.optimized.consensus < self.working.consensus:
+        if self.optimized.energy < self.working.energy:
             self.optimized = self.optimized
         else:
             self.optimized = copy.deepcopy(self.working)
@@ -106,9 +106,9 @@ class Boltzmann():
         """
         for i in range(iterations):
             self.anneal()
-            self.logs.append(self.optimized.consensus)
+            self.logs.append(self.optimized.energy)
         print("Optimized Route: " + " -> ".join(self.optimized.route))
-        print("Distance: " + str(self.optimized.consensus))
+        print("Distance: " + str(self.optimized.energy))
 
         sb.set_style('darkgrid')
         plt.plot(self.logs)

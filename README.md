@@ -61,7 +61,8 @@ x.train(500)
 
 With output:
 ```shell
-Optimized Route: Dallas -> St. Louis -> New York -> Boston -> Chicago -> Minneapolis -> Denver -> Salt Lake City -> Seattle -> San Francisco -> Los Angeles -> Phoenix -> Houston -> Dallas
+Optimized Route: Dallas -> St. Louis -> New York -> Boston -> Chicago -> Minneapolis -> Denver
+-> Salt Lake City -> Seattle -> San Francisco -> Los Angeles -> Phoenix -> Houston -> Dallas
 Distance: 7293
 ```
 ![](examples/Boltzmann_example.png)

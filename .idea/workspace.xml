@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46a86954-6d52-4daa-b90e-b04e3750fbb5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Boltzmann.py" afterPath="$PROJECT_DIR$/Boltzmann.py" />
-      <change beforePath="$PROJECT_DIR$/examples/Boltzmann_example.py" afterPath="$PROJECT_DIR$/examples/Boltzmann_example.py" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="Boltzmann_example.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/Boltzmann_example.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="138">
+              <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -210,7 +209,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50958467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5063898" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5063898" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -292,8 +291,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/Boltzmann_example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="11" />
+        <state relative-caret-position="138">
+          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>

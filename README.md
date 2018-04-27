@@ -3,7 +3,7 @@
 # Soma
 
 This repository holds the code for neural networks I've implemented for my Neural Networks course at JHU. `FFBP.py` and `Boltzmann.py` are objects used to implement
-Feed Forward Back Propagation Networks and Boltzmann Machines, respectively. Examples of how to implement follow.
+Feed Forward Back Propagation Networks and Boltzmann Machines, respectively.
 
 #### Feed Forward Back Propagation (FFBP) Multilayer Perceptron Network
 
@@ -33,7 +33,7 @@ The built-in trainer utilizes a batch method. An online training method can be u
 #### Boltzmann Machine with Simulated Annealing for the Traveling Salesman Problem
 
 A Boltzmann Machine can be created and trained as follows. It takes a distance matrix as its only argument. The row and column indices in the matrix represents
-cities, and thus, each entry represents the distance between cities. For example, entry (0,1), represents the distance between city A and B, which is 10. This matrix is symmetric, since the distance from A to B is the same as the distance from B to A, or (0,1) = (1,0)
+cities, and thus, each entry represents the distance between cities. For example, entry (0,1), represents the distance between city A and B, which is 10. This matrix is symmetric, since the distance from A to B is the same as the distance from B to A, or (0,1) = (1,0).
 
 ```python
 from soma import Boltzmann as bolt

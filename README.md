@@ -59,4 +59,4 @@ With output:
 ```
 ![](Boltzmann_example.png)
 
-This script is included as `Boltzmann_example.py`
+This script is included as `examples/Boltzmann_example.py`

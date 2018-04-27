@@ -98,7 +98,7 @@ class Boltzmann():
 
     def train(self, iterations):
         """
-        Iterator to anneal the network. 
+        Iterator to anneal the network.
         """
         for i in range(iterations):
             self.anneal()

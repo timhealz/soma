@@ -7,5 +7,5 @@ distances = np.array([[0, 10, 20, 5, 18],
                       [5, 32, 25, 0, 35],
                       [18, 10, 16, 35, 0]])
 
-x = bolt.Boltzmann(5, distances)
+x = bolt.Boltzmann(distances)
 x.train(50)

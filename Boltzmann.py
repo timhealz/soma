@@ -17,8 +17,8 @@ class Network():
     setup in this way because of TSP constraints: cannot visit two cities at the same time, and cannot visit
     cities twice.
     """
-    def __init__(self, nodes, weight_matrix):
-        self.dim = nodes
+    def __init__(self, weight_matrix):
+        self.dim = len(weight_matrix)
         self.size = self.dim * self.dim
         self.network = np.array([[0 for i in range(self.dim)]
                     for i in range(self.dim)])
@@ -83,8 +83,8 @@ class Boltzmann():
     Boltzmann object stochastically anneals on the Network object to reach an optimized state, minimizing
     the distance between cities.
     """
-    def __init__(self, nodes, weight_matrix):
-        self.optimized = Network(nodes, weight_matrix)
+    def __init__(self, weight_matrix):
+        self.optimized = Network(weight_matrix)
         self.logs = []
 
     def anneal(self):

@@ -24,7 +24,6 @@ class Network():
     """
     def __init__(self, weight_matrix):
         self.dim = len(weight_matrix)
-        self.size = self.dim * self.dim
         self.network = np.array([[0 for i in range(self.dim)]
                     for i in range(self.dim)])
         self.network = np.transpose(self.network)

@@ -17,10 +17,10 @@ class Network():
     setup in this way because of TSP constraints: cannot visit two cities at the same time, and cannot visit
     cities twice.
 
-    It takes a distance matrix as its only argument. The row and column indices in the matrix represents cities,
-    and thus, each entry represents the distance between cities. For example, entry (0,1), represents the distance
-    between city A and B, which is 10. This matrix is symmetric, since the distance from A to B is the same as the
-    distance from B to A, or (0,1) = (1,0).
+    It takes a list of city names and a distance matrix as its arguments. The row and column indices in the matrix
+    represents cities, and thus, each entry represents the distance between cities. For example, entry (0,1),
+    represents the distance between city A and B, which is 10. This matrix is symmetric, since the distance from A
+    to B is the same as the distance from B to A, or (0,1) = (1,0).
     """
     def __init__(self, cities, weight_matrix):
         self.cities = cities

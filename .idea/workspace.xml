@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46a86954-6d52-4daa-b90e-b04e3750fbb5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/examples/Boltzmann_example_2.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Boltzmann.py" afterPath="$PROJECT_DIR$/Boltzmann.py" />
-      <change beforePath="$PROJECT_DIR$/examples/Boltzmann_example.png" afterPath="$PROJECT_DIR$/examples/Boltzmann_example.png" />
-      <change beforePath="$PROJECT_DIR$/examples/Boltzmann_example.py" afterPath="$PROJECT_DIR$/examples/Boltzmann_example_1.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Boltzmann.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Boltzmann.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Boltzmann.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="122" column="18" lean-forward="false" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+            <state relative-caret-position="450">
+              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               <folding>
                 <element signature="e#183#204#0" expanded="true" />
               </folding>
@@ -41,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Boltzmann_example_2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Boltzmann_example_2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/Boltzmann_example_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="12" />
+            <state relative-caret-position="460">
+              <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -72,9 +68,9 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
         <option value="$PROJECT_DIR$/Boltzmann_example.py" />
         <option value="$PROJECT_DIR$/examples/Boltzmann_example.py" />
-        <option value="$PROJECT_DIR$/Boltzmann.py" />
         <option value="$PROJECT_DIR$/examples/Boltzmann_example_1.py" />
         <option value="$PROJECT_DIR$/examples/Boltzmann_example_2.py" />
+        <option value="$PROJECT_DIR$/Boltzmann.py" />
       </list>
     </option>
   </component>
@@ -307,12 +303,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Boltzmann.py">
+    <entry file="file://$PROJECT_DIR$/examples/Boltzmann_example_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="122" column="18" lean-forward="false" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+        <state relative-caret-position="460">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
           <folding>
-            <element signature="e#183#204#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -327,12 +323,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/Boltzmann_example_2.py">
+    <entry file="file://$PROJECT_DIR$/Boltzmann.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="12" />
+        <state relative-caret-position="450">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#183#204#0" expanded="true" />
           </folding>
         </state>
       </provider>

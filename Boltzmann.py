@@ -30,6 +30,8 @@ class Network():
             self.flip(i, j)
 
         self.pairs = list(zip(*np.nonzero(self.network)))
+        self.route = [chr(x[1]+65) for x in self.pairs]
+        self.route.append(self.route[0])
         self.weights = weight_matrix
         self.calculate_consensus()
 
@@ -60,7 +62,7 @@ class Network():
             self.consensus += self.calculate_cost([self.pairs[k], self.pairs[k+1]])
             k += 1
 
-        returning_connection = [self.pairs[self.dim-1], (self.pairs[0][0], self.dim-1)]
+        returning_connection = [self.pairs[self.dim-1], self.pairs[0]]
         self.consensus += self.calculate_cost(returning_connection)
 
         return(self.consensus)
@@ -72,6 +74,8 @@ class Network():
         seed = rand.sample(list(range(self.dim)), 2)
         self.network[:, [seed[0], seed[1]]] = self.network[:, [seed[1], seed[0]]]
         self.pairs = tuple(zip(*np.nonzero(self.network)))
+        self.route = [chr(x[1]+65) for x in self.pairs]
+        self.route.append(self.route[0])
         self.calculate_consensus()
 
 class Boltzmann():
@@ -103,7 +107,8 @@ class Boltzmann():
         for i in range(iterations):
             self.anneal()
             self.logs.append(self.optimized.consensus)
-        print(self.optimized.network)
+        print("Optimized Route: " + " -> ".join(self.optimized.route))
+        print("Distance: " + str(self.optimized.consensus))
 
         sb.set_style('darkgrid')
         plt.plot(self.logs)

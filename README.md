@@ -39,13 +39,16 @@ cities, and thus, each entry represents the distance between cities. For example
 from soma import Boltzmann as bolt
 import numpy as np
 
+# Distance matrix for Programming Assignment
 distances = np.array([[0, 10, 20, 5, 18],
                       [10, 0, 15, 32, 10],
                       [20, 15, 0, 25, 16],
                       [5, 32, 25, 0, 35],
                       [18, 10, 16, 35, 0]])
 
+# Initialize Boltzmann Machine
 x = bolt.Boltzmann(distances)
+# Iterate and anneal for 50 iterations
 x.train(50)
 ```
 

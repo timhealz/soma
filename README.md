@@ -69,4 +69,4 @@ Distance: 7293
 ```
 ![](examples/Boltzmann_example.png)
 
-This example is captured in the `examples/Boltzmann_example_1.py` script
+This example is captured in the `examples/Boltzmann_example_2.py` script

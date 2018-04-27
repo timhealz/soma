@@ -1,10 +1,21 @@
+"""
+Implementation of a Boltzmann Machine with Simulated Annealing to solve the Traveling Salesman Problem (TSP),
+consisting of Network and Boltzmann objects.
+
+Author: Tim Healy
+"""
+
 import random as rand
 import numpy as np
 import copy
+import seaborn as sb
+import matplotlib.pyplot as plt
 
 class Network():
     """
-    Sets up a square network of boolean 1 and 0 values.
+    The Network object initializes a n x n matrix of n random linearly independent unit vectors. This matrix is
+    setup in this way because of TSP constraints: cannot visit two cities at the same time, and cannot visit
+    cities twice.
     """
     def __init__(self, nodes, weight_matrix):
         self.dim = nodes
@@ -20,16 +31,17 @@ class Network():
 
         self.pairs = list(zip(*np.nonzero(self.network)))
         self.weights = weight_matrix
-        self.consensus = self.calculate_consensus()
+        self.calculate_consensus()
 
     def flip(self, i, j):
+        """
+        Helper function to flip states of nodes within the network. Used to initialize the network itself.
+        """
         self.network[i][j] = np.abs(self.network[i][j] - 1)
 
     def calculate_cost(self, connection):
         """
-        Helper function to calculate distance from any given node
-        :param connection: two tuples representing nodes in matrix. [(0,1), (2,3)] for example
-        :return:
+        Helper function to calculate distance from activated nodes. Used to calculate consensus
         """
         weight_ij = (connection[0][1], connection[1][1])
         x_i = connection[0]
@@ -38,6 +50,10 @@ class Network():
         return(calc)
 
     def calculate_consensus(self):
+        """
+        Calculates consensus of the network object. Consensus is used in the anneal process to optimize the
+        route in the TSP. The return trip back to the initial city is also calculated and added to the consensus.
+        """
         self.consensus = 0
         k = 0
         while k < self.dim-1:
@@ -50,17 +66,28 @@ class Network():
         return(self.consensus)
 
     def shuffle(self):
+        """
+        Shuffles the network by swapping columns of linearly independent unit vectors.
+        """
         seed = rand.sample(list(range(self.dim)), 2)
         self.network[:, [seed[0], seed[1]]] = self.network[:, [seed[1], seed[0]]]
         self.pairs = tuple(zip(*np.nonzero(self.network)))
         self.calculate_consensus()
 
 class Boltzmann():
+    """
+    Boltzmann object stochastically anneals on the Network object to reach an optimized state, minimizing
+    the distance between cities.
+    """
     def __init__(self, nodes, weight_matrix):
         self.optimized = Network(nodes, weight_matrix)
-        self.working = copy.deepcopy(self.optimized)
+        self.logs = []
 
     def anneal(self):
+        """
+        Makes a copy of the initialized network, shuffles it, and tests to see if the consensus of the shuffled
+        network is lower than the current network.
+        """
         self.working = copy.deepcopy(self.optimized)
         self.working.shuffle()
 
@@ -69,20 +96,15 @@ class Boltzmann():
         else:
             self.optimized = copy.deepcopy(self.working)
 
-        #print(self.optimized.network)
-        print(self.optimized.consensus)
-
     def train(self, iterations):
+        """
+        Iterator to anneal the network. 
+        """
         for i in range(iterations):
             self.anneal()
+            self.logs.append(self.optimized.consensus)
         print(self.optimized.network)
 
-distances = np.array([[0, 10, 20, 5, 18],
-                      [10, 0, 15, 32, 10],
-                      [20, 15, 0, 25, 16],
-                      [5, 32, 25, 0, 35],
-                      [18, 10, 16, 35, 0]])
-x = Network(5, distances)
-
-x = Boltzmann(5, distances)
-x.train(100)
+        sb.set_style('darkgrid')
+        plt.plot(self.logs)
+        plt.show()

@@ -16,6 +16,11 @@ class Network():
     The Network object initializes a n x n matrix of n random linearly independent unit vectors. This matrix is
     setup in this way because of TSP constraints: cannot visit two cities at the same time, and cannot visit
     cities twice.
+
+    It takes a distance matrix as its only argument. The row and column indices in the matrix represents cities,
+    and thus, each entry represents the distance between cities. For example, entry (0,1), represents the distance
+    between city A and B, which is 10. This matrix is symmetric, since the distance from A to B is the same as the
+    distance from B to A, or (0,1) = (1,0).
     """
     def __init__(self, weight_matrix):
         self.dim = len(weight_matrix)

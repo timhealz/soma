@@ -1,4 +1,4 @@
-import Boltzmann as bolt
+import Boltzmann as boltz
 import numpy as np
 
 distances = np.array([[0, 10, 20, 5, 18],
@@ -7,5 +7,5 @@ distances = np.array([[0, 10, 20, 5, 18],
                       [5, 32, 25, 0, 35],
                       [18, 10, 16, 35, 0]])
 
-x = bolt.Boltzmann(distances)
+x = boltz.Boltzmann(distances)
 x.train(50)

@@ -1,9 +1,8 @@
 
 # Soma
 
-This repository holds the code for neural networks I've implemented for my Neural Networks course at JHU.
-
-Future plans are to implement a framework for Recurrent Neural Networks.
+This repository holds the code for neural networks I've implemented for my Neural Networks course at JHU. `FFBP.py` and `Boltzmann.py` are modules to implement
+Feed Forward Back Propagation Networks and Boltzmann Machines, respectively. Examples of how to implement follow.
 
 #### Feed Forward Back Propagation (FFBP) Multilayer Perceptron Network
 

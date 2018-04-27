@@ -26,11 +26,10 @@ class Network():
         self.dim = len(weight_matrix)
         self.network = np.array([[0 for i in range(self.dim)]
                     for i in range(self.dim)])
-        self.network = np.transpose(self.network)
 
-        n = list(range(self.dim))
+        jar = list(range(self.dim))
         for j in range(self.dim):
-            i = n.pop(rand.randint(0,len(n)-1))
+            i = jar.pop(rand.randint(0,len(jar)-1))
             self.flip(i, j)
 
         self.pairs = list(zip(*np.nonzero(self.network)))

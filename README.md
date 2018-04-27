@@ -1,4 +1,5 @@
 
+
 # Soma
 
 This repository holds the code for neural networks I've implemented for my Neural Networks course at JHU. `FFBP.py` and `Boltzmann.py` are objects used to implement
@@ -49,12 +50,8 @@ x.train(50)
 
 With output:
 ```shell
-[[0 0 1 0 0]
- [0 0 0 0 1]
- [0 1 0 0 0]
- [1 0 0 0 0]
- [0 0 0 1 0]]
- Distance: 66
+Optimized Route: C -> D -> A -> B -> E -> C
+Distance: 66
 ```
 ![](examples/Boltzmann_example.png)
 

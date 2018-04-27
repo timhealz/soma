@@ -107,9 +107,13 @@ class Boltzmann():
         for i in range(iterations):
             self.anneal()
             self.logs.append(self.optimized.energy)
+
         print("Optimized Route: " + " -> ".join(self.optimized.route))
         print("Distance: " + str(self.optimized.energy))
 
         sb.set_style('darkgrid')
         plt.plot(self.logs)
+        plt.title("Optimized Distance")
+        plt.xlabel("Iterations")
+        plt.ylabel("Distance")
         plt.show()

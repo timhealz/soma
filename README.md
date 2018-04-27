@@ -52,7 +52,8 @@ distances = np.array(
   [ 875, 1589,  262,  466,  796,  547, 1724, 1038, 1744,    0,  679, 1272, 1162], # St. Louis
   [1420, 1374,  940, 1056,  879,  225, 1891, 1605, 1645,  679,    0, 1017, 1200], # Houston
   [2145,  357, 1453, 1280,  586,  887, 1114, 2300,  653, 1272, 1017,    0,  504], # Phoenix
-  [1972,  579, 1260,  987,  371,  999,  701, 2099,  600, 1162,  1200,  504,   0]]) # Salt Lake City
+  [1972,  579, 1260,  987,  371,  999,  701, 2099,  600, 1162,  1200,  504,   0]] # Salt Lake City
+  )
 cities = ['New York', 'Los Angeles', 'Chicago', 'Minneapolis', 'Denver', 'Dallas', 'Seattle',
           'Boston', 'San Francisco', 'St. Louis', 'Houston', 'Phoenix', 'Salt Lake City' ]
 

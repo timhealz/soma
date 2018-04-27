@@ -31,7 +31,7 @@ class Network():
         :param connection: two tuples representing nodes in matrix. [(0,1), (2,3)] for example
         :return:
         """
-        weight_ij = (connection[1][0], connection[1][1])
+        weight_ij = (connection[0][1], connection[1][1])
         x_i = connection[0]
         x_j = connection[1]
         calc = self.weights[weight_ij] * self.network[x_i] * self.network[x_j]
@@ -69,12 +69,13 @@ class Boltzmann():
         else:
             self.optimized = copy.deepcopy(self.working)
 
-        print(self.optimized.network)
+        #print(self.optimized.network)
         print(self.optimized.consensus)
 
     def train(self, iterations):
         for i in range(iterations):
             self.anneal()
+        print(self.optimized.network)
 
 distances = np.array([[0, 10, 20, 5, 18],
                       [10, 0, 15, 32, 10],
@@ -84,4 +85,4 @@ distances = np.array([[0, 10, 20, 5, 18],
 x = Network(5, distances)
 
 x = Boltzmann(5, distances)
-x.train(10)
+x.train(100)

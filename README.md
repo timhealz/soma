@@ -57,6 +57,6 @@ With output:
  [0 0 0 1 0]]
  Distance: 66
 ```
-![](Boltzmann_example.png)
+![](examples/Boltzmann_example.png)
 
-This script is included as `examples/Boltzmann_example.py`
+This example is captured in the `examples/Boltzmann_example.py` script

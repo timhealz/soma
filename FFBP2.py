@@ -13,6 +13,7 @@ import numpy as np
 import random as rand
 import activation_functions as af
 
+
 class Perceptron():
     def __init__(self, num_inputs):
         """
@@ -33,17 +34,17 @@ class Perceptron():
             y = af.ramp(x)
         else:
             y = af.sigmoid(x)
-        return(y)
+        return (y)
 
     def calc_output_activation(self, inputs):
         A = np.dot(inputs, self.weights) + self.bias
         self.activation_value = self.function(A, 'ramp')
-        return(self.activation_value)
+        return (self.activation_value)
 
     def calc_activation(self, inputs):
         A = np.dot(inputs, self.weights) + self.bias
         self.activation_value = self.function(A, 'sigmoid')
-        return(self.activation_value)
+        return (self.activation_value)
 
     def set_output_delta(self, inputs, desired_output, eta):
         """
@@ -55,9 +56,9 @@ class Perceptron():
         """
         inputs = np.array(inputs)
         self.error = desired_output - self.calc_output_activation(inputs)
-        self.total_error = (1/2)*self.error**2
+        self.total_error = (1 / 2) * self.error ** 2
         self.delta = self.error * af.sigmoid(np.dot(self.weights, inputs) + self.bias)
-                     #(1 - self.activation_value) *
+        # (1 - self.activation_value) *
         self.updated_weights = self.weights + eta * self.delta * inputs
         self.bias = self.bias + eta * self.delta * 1
         output = str(self.total_error) + ", " + str(self.activation_value)
@@ -78,7 +79,7 @@ class Perceptron():
         self.updated_weights = self.weights + eta * self.delta * inputs
         self.bias = self.bias + eta * self.delta * 1
         output = str(self.updated_weights) + ", " + str(self.bias)
-        #print("     " + output)
+        # print("     " + output)
 
 class Network():
     def __init__(self, structure, num_inputs):
@@ -94,7 +95,7 @@ class Network():
             if i == 0:
                 layer = [Perceptron(num_inputs) for x in range(j)]
             else:
-                layer = [Perceptron(self.structure[i-1]) for x in range(j)]
+                layer = [Perceptron(self.structure[i - 1]) for x in range(j)]
             self.network.append(layer)
 
         self.output_vector = []
@@ -105,17 +106,19 @@ class Network():
         each perceptron in the layer, and then "feeds" the newly calculated activations values forward into the next layer
         of perceptrons until it reaches the end of the network.
         """
-        #print("Feeding Forward...")
+        # print("Feeding Forward...")
 
         k = 0
         self.activations = []
         while k < len(self.structure):
-            #print("     Layer " + str(k+1) + " Activations")
+            # print("     Layer " + str(k+1) + " Activations")
             if k == 0:
                 self.activations.append([x.calc_activation(inputs) for x in self.network[k]])
+            if k == len(self.structure)-1:
+                self.activations.append([x.calc_output_activation(self.activations[k - 1]) for x in self.network[k]])
             else:
-                self.activations.append([x.calc_activation(self.activations[k-1]) for x in self.network[k]])
-            #print("     " + str(self.activations[k]))
+                self.activations.append([x.calc_activation(self.activations[k - 1]) for x in self.network[k]])
+            # print("     " + str(self.activations[k]))
             k += 1
 
     def back_propagate(self, inputs, desired_output, eta):
@@ -124,32 +127,32 @@ class Network():
         desired output(s), and calculates the error and delta values. These delta values are fed back into the previous
         layer, updating the weights and biases, until it reaches the beginning of the network.
         """
-        #print("Back Propagating...")
-        k = len(self.structure)-1
+        # print("Back Propagating...")
+        k = len(self.structure) - 1
         while k >= 0:
-            if k == len(self.structure)-1:
+            if k == len(self.structure) - 1:
                 print("     Total Error, Output Layer Activation Value")
-                prev_outputs = self.activations[k-1]
+                prev_outputs = self.activations[k - 1]
                 [o.set_output_delta(prev_outputs, desired_output, eta) for o in self.network[k]]
 
             elif k == 0:
-                #print("     Updated Layer " + str(k+1) + " Weights & Biases")
-                prev_deltas = [o.delta for o in self.network[k+1]]
+                # print("     Updated Layer " + str(k+1) + " Weights & Biases")
+                prev_deltas = [o.delta for o in self.network[k + 1]]
                 perceptrons = self.structure[k]
                 for i in range(perceptrons):
-                    prev_weights = [o.weights[i] for o in self.network[k+1]]
+                    prev_weights = [o.weights[i] for o in self.network[k + 1]]
                     self.network[k][i].set_hidden_delta(inputs, prev_weights, prev_deltas, eta)
 
             else:
-                #print("     Updated Layer " + str(k+1) + " Weights & Biases")
-                prev_deltas = [o.delta for o in self.network[k+1]]
-                prev_outputs = [o.activation_value for o in self.network[k-1]]
+                # print("     Updated Layer " + str(k+1) + " Weights & Biases")
+                prev_deltas = [o.delta for o in self.network[k + 1]]
+                prev_outputs = [o.activation_value for o in self.network[k - 1]]
                 perceptrons = self.structure[k]
                 for i in range(perceptrons):
-                    prev_weights = [o.weights[i] for o in self.network[k+1]]
+                    prev_weights = [o.weights[i] for o in self.network[k + 1]]
                     [self.network[k][i].set_hidden_delta(prev_outputs, prev_weights, prev_deltas, eta)]
 
-            k = k-1
+            k = k - 1
 
         for i, j in enumerate(x.structure):
             for k in range(j):
@@ -162,6 +165,7 @@ class Network():
         self.feed_forward(inputs)
         self.back_propagate(inputs, desired_output, eta)
         self.feed_forward(inputs)
+
 
 x = Network([10, 10, 1], 2)
 data = [[[1.98, 10], 0],
@@ -189,7 +193,6 @@ test = data[2]
 iterations = 20
 for i in range(iterations):
     x.trainer(test[0], test[1], 1)
-
 
 '''
 test = data[0:10]

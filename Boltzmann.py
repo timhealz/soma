@@ -22,9 +22,9 @@ class Network():
     represents the distance between city A and B, which is 10. This matrix is symmetric, since the distance from A
     to B is the same as the distance from B to A, or (0,1) = (1,0).
     """
-    def __init__(self, cities, weight_matrix):
+    def __init__(self, cities, distance_matrix):
         self.cities = cities
-        self.dim = len(weight_matrix)
+        self.dim = len(distance_matrix)
         self.network = np.array([[0 for i in range(self.dim)]
                     for i in range(self.dim)])
 
@@ -36,7 +36,7 @@ class Network():
         self.pairs = list(zip(*np.nonzero(self.network)))
         self.route = [self.cities[i[1]] for i in self.pairs]
         self.route.append(self.route[0])
-        self.weights = weight_matrix
+        self.weights = distance_matrix
         self.calculate_energy()
 
     def flip(self, i, j):
@@ -87,8 +87,8 @@ class Boltzmann():
     Boltzmann object stochastically anneals on the Network object to reach an optimized state, minimizing
     the distance between cities.
     """
-    def __init__(self, cities, weight_matrix):
-        self.optimized = Network(cities, weight_matrix)
+    def __init__(self, cities, distance_matrix):
+        self.optimized = Network(cities, distance_matrix)
         self.logs = []
 
     def anneal(self):

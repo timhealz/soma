@@ -96,7 +96,8 @@ print(logs[iterations-1])
 print('Network Weights:')
 print(x.weights)
 ```
-**Training Output**
+
+_Output_  
 ```
 Desired Outputs:
 [2, 1, 2, 1, 0, 1, 1, 2, 1, 2]
@@ -126,7 +127,7 @@ matches = differences(outs, desired_outputs)
 print('Matches: ' + str(matches))
 ```
 
-**Testing Output**
+_Output_  
 ```
 Desired Outputs:
 [0, 1, 2, 1, 1, 1, 2, 1, 1, 0]

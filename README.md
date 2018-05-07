@@ -66,7 +66,7 @@ for i, input_output in enumerate(data):
     input_output[0][1] = SOW_normalized[i]
 ```
 
-**Training**
+**Training**  
 The network will be trained using Stochastic Gradient Descent for 5000 iterations using the second half of the sample data set. Then, the first half of the sample data set will be used to test the network.
 
 ```python
@@ -107,7 +107,7 @@ Network Weights:
 ```
 
 **Testing**
-```
+```python
 outs = []
 for input_output in test:
     x.FFBP(input_output[0], input_output[1], eta)

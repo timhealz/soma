@@ -4,7 +4,7 @@
 
 This repository holds the code for neural networks I've implemented for my Neural Networks course at JHU. `FFBP.py` and `Boltzmann.py` are objects used to implement Feed Forward Back Propagation Networks and Boltzmann Machines, respectively.
 
-#### Feed Forward Back Propagation (FFBP) Multilayer Perceptron Network
+### Feed Forward Back Propagation (FFBP) Multilayer Perceptron Network
 
 A Feed Forward Back Propagation network can be created and trained to map inputs to outputs by learning from labeled data. The network takes the number of inputs and a "structure" of the network to initialize. For example, `FFBP.Network(2, [4, 4, 1])` would initialize a three layer network comprised of 4 Perceptrons in the first layer, 4 Perceptrons in the second layer, and 1 Perceptron in the output layer, with two inputs.
 
@@ -33,7 +33,7 @@ As an example, this network will be implemented to detect households with a high
 |[1.1, 35]| 1|
 |[0.85, 70]| 2|
 
-**Data Preprocessing**
+**Data Preprocessing**  
 Before feeding the data into the neural network, the SOW will be normalized using [feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) in an attempt to improve performance.
 
 ```python
@@ -132,11 +132,11 @@ Test Data Outputs:
 Matches: 8
 ```
 
-**Results**
+**Results**  
 After 5000 iterations of training, the network is able to separate 100% of the values correctly. After feeding the test data into the network, it was able to correctly determine the TACA value at an 80% success rate.
 
 
-#### Boltzmann Machine with Simulated Annealing for the Traveling Salesman Problem
+### Boltzmann Machine with Simulated Annealing for the Traveling Salesman Problem
 
 A Boltzmann Machine can be created and trained to solve the Traveling Salesman Problem (TSP), which optimizes to find the shortest route connecting a list of of locations. It takes a list of location names and a distance matrix as its arguments. The row and column indices in the matrix represent each of the locations, and thus, each entry represents the distance between location. For example, in the table below, entry (0,1) represents the distance between New York and Los Angeles, which is 2451. This matrix is symmetric, since the distance from New York to Los Angeles is the same as the distance from Los Angeles to New York, or (0,1) = (1,0).
 

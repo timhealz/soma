@@ -34,7 +34,7 @@ As an example, this network will be implemented to detect households with a high
 |[0.85, 70]| 2|
 
 **Data Preprocessing**
-Before feeding the data into the neural network, the SOW will be normalized using []feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) in an attempt to improve performance.
+Before feeding the data into the neural network, the SOW will be normalized using [feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) in an attempt to improve performance.
 
 ```python
 data = [[[1.98, 10], 0],

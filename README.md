@@ -67,7 +67,7 @@ for i, input_output in enumerate(data):
 ```
 
 **Training**  
-The network will be trained using stochastic gradient descent for 5000 iterations using the second half of the sample data set. Then, the first half of the sample data set will be used to test the network.
+The network will be trained using stochastic gradient descent for 5000 iterations using the second half of the sample data set. The first half of the sample data set will be used to test the network.
 
 ```python
 import FFBP

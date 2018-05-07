@@ -80,7 +80,6 @@ eta = 1
 
 logs = []
 for i in range(iterations):
-    #print('Iteration ' + str(i))
     set = []
     for input_output in train:
         x.FFBP(input_output[0], input_output[1], eta)

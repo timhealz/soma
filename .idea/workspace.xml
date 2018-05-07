@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46a86954-6d52-4daa-b90e-b04e3750fbb5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/FFBP2.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/FFBP3.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/activation_functions.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/classification_assigment.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Boltzmann.py" afterPath="$PROJECT_DIR$/Boltzmann.py" />
-      <change beforePath="$PROJECT_DIR$/FFBP.py" afterPath="$PROJECT_DIR$/FFBP.py" />
+      <change beforePath="$PROJECT_DIR$/FFBP.py" afterPath="$PROJECT_DIR$/archive/FFBP_old.py" />
+      <change beforePath="$PROJECT_DIR$/FFBP2.py" afterPath="$PROJECT_DIR$/archive/FFBP2.py" />
+      <change beforePath="$PROJECT_DIR$/FFBP3.py" afterPath="$PROJECT_DIR$/FFBP.py" />
+      <change beforePath="$PROJECT_DIR$/activation_functions.py" afterPath="$PROJECT_DIR$/archive/activation_functions.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,38 +18,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FFBP.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FFBP.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FFBP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2927">
-              <caret line="178" column="25" lean-forward="true" selection-start-line="178" selection-start-column="25" selection-end-line="178" selection-end-column="25" />
-              <folding>
-                <element signature="e#615#633#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FFBP2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FFBP2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="158" selection-end-column="79" />
-              <folding>
-                <element signature="e#615#633#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FFBP3.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FFBP3.py">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="598">
-              <caret line="134" column="27" lean-forward="true" selection-start-line="134" selection-start-column="27" selection-end-line="134" selection-end-column="27" />
+              <caret line="134" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classification_assigment.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classification_assigment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,16 +48,6 @@
               <folding>
                 <element signature="e#183#204#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activation_functions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/activation_functions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -117,6 +93,7 @@
         <option value="$PROJECT_DIR$/FFBP.py" />
         <option value="$PROJECT_DIR$/FFBP2.py" />
         <option value="$PROJECT_DIR$/FFBP3.py" />
+        <option value="$PROJECT_DIR$/classification_assigment.py" />
       </list>
     </option>
   </component>
@@ -151,11 +128,6 @@
               <item name="soma" type="b2602c69:ProjectViewProjectNode" />
               <item name="soma" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="soma" type="b2602c69:ProjectViewProjectNode" />
-              <item name="soma" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -170,6 +142,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/archive" />
       <recent name="$PROJECT_DIR$/examples" />
     </key>
   </component>
@@ -252,7 +225,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="soma" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FFBP.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/archive/FFBP_old.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -270,7 +243,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="soma" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FFBP3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FFBP.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -311,11 +284,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14468865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14468865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43223444" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43894994" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -339,7 +313,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FFBP.py">
+    <entry file="file://$PROJECT_DIR$/archive/FFBP_old.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -357,7 +331,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FFBP.py">
+    <entry file="file://$PROJECT_DIR$/archive/FFBP_old.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -401,7 +375,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/activation_functions.py">
+    <entry file="file://$PROJECT_DIR$/archive/activation_functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="13" />
@@ -419,17 +393,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FFBP.py">
+    <entry file="file://$PROJECT_DIR$/classification_assigment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2927">
-          <caret line="178" column="25" lean-forward="true" selection-start-line="178" selection-start-column="25" selection-end-line="178" selection-end-column="25" />
-          <folding>
-            <element signature="e#615#633#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="46">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FFBP2.py">
+    <entry file="file://$PROJECT_DIR$/archive/FFBP2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="692">
           <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="158" selection-end-column="79" />
@@ -439,10 +411,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FFBP3.py">
+    <entry file="file://$PROJECT_DIR$/archive/FFBP_old.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2927">
+          <caret line="179" column="25" lean-forward="false" selection-start-line="179" selection-start-column="25" selection-end-line="179" selection-end-column="25" />
+          <folding>
+            <element signature="e#615#633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FFBP.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
-          <caret line="134" column="27" lean-forward="true" selection-start-line="134" selection-start-column="27" selection-end-line="134" selection-end-column="27" />
+          <caret line="134" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

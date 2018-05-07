@@ -119,6 +119,9 @@ print([input_output[1] for input_output in test])
 print('Test Data Outputs:')
 print(outs)
 
+def differences(a, b):
+    return sum(i == j for i, j in zip(a, b))
+
 matches = differences(outs, desired_outputs)
 print('Matches: ' + str(matches))
 ```
